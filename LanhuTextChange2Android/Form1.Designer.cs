@@ -115,6 +115,7 @@
             this.buttonAdd10 = new System.Windows.Forms.Button();
             this.buttonReduce10 = new System.Windows.Forms.Button();
             this.btnClearText = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -1045,11 +1046,21 @@
             this.btnClearText.UseVisualStyleBackColor = true;
             this.btnClearText.Click += new System.EventHandler(this.btnClearText_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 672);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(341, 15);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Tips:选中蓝湖一个文本控件,按下F1自动生成样式";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 722);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLine);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -1176,6 +1187,7 @@
         private System.Windows.Forms.Button buttonReduce10;
         private System.Windows.Forms.Button buttonAdd10;
         private System.Windows.Forms.Button btnClearText;
+        private System.Windows.Forms.Label label2;
     }
 }
 

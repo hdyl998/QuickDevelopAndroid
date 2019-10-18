@@ -125,7 +125,7 @@ namespace LanhuTextChange2Android
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            deftaultSetting();
+            deftaultSetting(); 
 
             radioButtonControl = radioButtonTextView;
 
