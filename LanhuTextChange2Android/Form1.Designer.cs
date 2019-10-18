@@ -46,6 +46,9 @@
             this.rbWidthPoint = new System.Windows.Forms.RadioButton();
             this.etWidthPoint = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnClearText = new System.Windows.Forms.Button();
+            this.checkBoxDrawablePadding = new System.Windows.Forms.CheckBox();
+            this.checkBoxLineSpaceExtra = new System.Windows.Forms.CheckBox();
             this.textBoxTextViewColor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -80,7 +83,9 @@
             this.checkBoxPaddingRight = new System.Windows.Forms.CheckBox();
             this.checkBoxPaddingTop = new System.Windows.Forms.CheckBox();
             this.checkBoxPaddingBottom = new System.Windows.Forms.CheckBox();
+            this.buttonReduce10 = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
+            this.buttonAdd10 = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
             this.btnNum100 = new System.Windows.Forms.Button();
             this.btnNum50 = new System.Windows.Forms.Button();
@@ -110,11 +115,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnLine = new System.Windows.Forms.Button();
             this.radioButtonEditText = new System.Windows.Forms.RadioButton();
-            this.checkBoxLineSpaceExtra = new System.Windows.Forms.CheckBox();
-            this.checkBoxDrawablePadding = new System.Windows.Forms.CheckBox();
-            this.buttonAdd10 = new System.Windows.Forms.Button();
-            this.buttonReduce10 = new System.Windows.Forms.Button();
-            this.btnClearText = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -267,6 +267,7 @@
             this.rbHeightPoint.TabStop = true;
             this.rbHeightPoint.Text = "指定";
             this.rbHeightPoint.UseVisualStyleBackColor = true;
+            this.rbHeightPoint.CheckedChanged += new System.EventHandler(this.rbHeightPoint_CheckedChanged);
             // 
             // groupBox6
             // 
@@ -313,6 +314,7 @@
             this.rbWidthPoint.TabStop = true;
             this.rbWidthPoint.Text = "指定";
             this.rbWidthPoint.UseVisualStyleBackColor = true;
+            this.rbWidthPoint.CheckedChanged += new System.EventHandler(this.rbWidthPoint_CheckedChanged);
             // 
             // etWidthPoint
             // 
@@ -343,6 +345,36 @@
             this.groupBox5.TabIndex = 16;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "TextView";
+            // 
+            // btnClearText
+            // 
+            this.btnClearText.Location = new System.Drawing.Point(257, 27);
+            this.btnClearText.Name = "btnClearText";
+            this.btnClearText.Size = new System.Drawing.Size(75, 23);
+            this.btnClearText.TabIndex = 6;
+            this.btnClearText.Text = "清空";
+            this.btnClearText.UseVisualStyleBackColor = true;
+            this.btnClearText.Click += new System.EventHandler(this.btnClearText_Click);
+            // 
+            // checkBoxDrawablePadding
+            // 
+            this.checkBoxDrawablePadding.AutoSize = true;
+            this.checkBoxDrawablePadding.Location = new System.Drawing.Point(21, 178);
+            this.checkBoxDrawablePadding.Name = "checkBoxDrawablePadding";
+            this.checkBoxDrawablePadding.Size = new System.Drawing.Size(149, 19);
+            this.checkBoxDrawablePadding.TabIndex = 5;
+            this.checkBoxDrawablePadding.Text = "drawablePadding";
+            this.checkBoxDrawablePadding.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxLineSpaceExtra
+            // 
+            this.checkBoxLineSpaceExtra.AutoSize = true;
+            this.checkBoxLineSpaceExtra.Location = new System.Drawing.Point(21, 148);
+            this.checkBoxLineSpaceExtra.Name = "checkBoxLineSpaceExtra";
+            this.checkBoxLineSpaceExtra.Size = new System.Drawing.Size(141, 19);
+            this.checkBoxLineSpaceExtra.TabIndex = 4;
+            this.checkBoxLineSpaceExtra.Text = "lineSpaceExtra";
+            this.checkBoxLineSpaceExtra.UseVisualStyleBackColor = true;
             // 
             // textBoxTextViewColor
             // 
@@ -679,6 +711,16 @@
             this.checkBoxPaddingBottom.Text = "PaddingBottom";
             this.checkBoxPaddingBottom.UseVisualStyleBackColor = true;
             // 
+            // buttonReduce10
+            // 
+            this.buttonReduce10.Location = new System.Drawing.Point(635, 474);
+            this.buttonReduce10.Name = "buttonReduce10";
+            this.buttonReduce10.Size = new System.Drawing.Size(75, 42);
+            this.buttonReduce10.TabIndex = 12;
+            this.buttonReduce10.Text = "-10";
+            this.buttonReduce10.UseVisualStyleBackColor = true;
+            this.buttonReduce10.Click += new System.EventHandler(this.buttonReduce10_Click);
+            // 
             // btnDown
             // 
             this.btnDown.Location = new System.Drawing.Point(554, 474);
@@ -688,6 +730,16 @@
             this.btnDown.Text = "-";
             this.btnDown.UseVisualStyleBackColor = true;
             this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
+            // 
+            // buttonAdd10
+            // 
+            this.buttonAdd10.Location = new System.Drawing.Point(635, 418);
+            this.buttonAdd10.Name = "buttonAdd10";
+            this.buttonAdd10.Size = new System.Drawing.Size(75, 42);
+            this.buttonAdd10.TabIndex = 12;
+            this.buttonAdd10.Text = "+10";
+            this.buttonAdd10.UseVisualStyleBackColor = true;
+            this.buttonAdd10.Click += new System.EventHandler(this.buttonAdd10_Click);
             // 
             // btnUp
             // 
@@ -995,56 +1047,6 @@
             this.radioButtonEditText.Text = "EditText";
             this.radioButtonEditText.UseVisualStyleBackColor = true;
             this.radioButtonEditText.CheckedChanged += new System.EventHandler(this.radioButtonEditText_CheckedChanged);
-            // 
-            // checkBoxLineSpaceExtra
-            // 
-            this.checkBoxLineSpaceExtra.AutoSize = true;
-            this.checkBoxLineSpaceExtra.Location = new System.Drawing.Point(21, 148);
-            this.checkBoxLineSpaceExtra.Name = "checkBoxLineSpaceExtra";
-            this.checkBoxLineSpaceExtra.Size = new System.Drawing.Size(141, 19);
-            this.checkBoxLineSpaceExtra.TabIndex = 4;
-            this.checkBoxLineSpaceExtra.Text = "lineSpaceExtra";
-            this.checkBoxLineSpaceExtra.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxDrawablePadding
-            // 
-            this.checkBoxDrawablePadding.AutoSize = true;
-            this.checkBoxDrawablePadding.Location = new System.Drawing.Point(21, 178);
-            this.checkBoxDrawablePadding.Name = "checkBoxDrawablePadding";
-            this.checkBoxDrawablePadding.Size = new System.Drawing.Size(149, 19);
-            this.checkBoxDrawablePadding.TabIndex = 5;
-            this.checkBoxDrawablePadding.Text = "drawablePadding";
-            this.checkBoxDrawablePadding.UseVisualStyleBackColor = true;
-            // 
-            // buttonAdd10
-            // 
-            this.buttonAdd10.Location = new System.Drawing.Point(635, 418);
-            this.buttonAdd10.Name = "buttonAdd10";
-            this.buttonAdd10.Size = new System.Drawing.Size(75, 42);
-            this.buttonAdd10.TabIndex = 12;
-            this.buttonAdd10.Text = "+10";
-            this.buttonAdd10.UseVisualStyleBackColor = true;
-            this.buttonAdd10.Click += new System.EventHandler(this.buttonAdd10_Click);
-            // 
-            // buttonReduce10
-            // 
-            this.buttonReduce10.Location = new System.Drawing.Point(635, 474);
-            this.buttonReduce10.Name = "buttonReduce10";
-            this.buttonReduce10.Size = new System.Drawing.Size(75, 42);
-            this.buttonReduce10.TabIndex = 12;
-            this.buttonReduce10.Text = "-10";
-            this.buttonReduce10.UseVisualStyleBackColor = true;
-            this.buttonReduce10.Click += new System.EventHandler(this.buttonReduce10_Click);
-            // 
-            // btnClearText
-            // 
-            this.btnClearText.Location = new System.Drawing.Point(257, 27);
-            this.btnClearText.Name = "btnClearText";
-            this.btnClearText.Size = new System.Drawing.Size(75, 23);
-            this.btnClearText.TabIndex = 6;
-            this.btnClearText.Text = "清空";
-            this.btnClearText.UseVisualStyleBackColor = true;
-            this.btnClearText.Click += new System.EventHandler(this.btnClearText_Click);
             // 
             // label2
             // 

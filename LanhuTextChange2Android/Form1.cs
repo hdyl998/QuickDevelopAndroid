@@ -614,6 +614,15 @@ namespace LanhuTextChange2Android
             }
         }
 
+        private void rbWidthPoint_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxCur = etWidthPoint;
+        }
+
+        private void rbHeightPoint_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxCur = etHeightPoint;
+        }
     }
 
    
